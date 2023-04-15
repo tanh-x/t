@@ -9,7 +9,7 @@
   z-index: 5;
   border: 2px solid red;
 
-  
+  pointer-events: none;
 }
 
 .sidebar {
@@ -17,6 +17,7 @@
   width: 45em;
   height: 100%;
   
+  pointer-events: auto;
 }
 
 .underlay {

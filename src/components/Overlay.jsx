@@ -5,9 +5,11 @@ const Overlay = (props) => {
   return (
     <div className="overlay">
       <div className="sidebar">
+
         <Button variant="primary" onClick={() => {
           props.changeLocation("something");
         }}>Toggle map/table view</Button>
+        
       </div>
     </div>
   );
