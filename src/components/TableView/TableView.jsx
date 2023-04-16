@@ -1,6 +1,7 @@
 import "./TableView.css";
 import Table from "./Table";
-
+import { useEffect, useState } from "react";
+import TableModal from "./TableModal";
 
 const tables = [
   {
@@ -90,17 +91,34 @@ const positionById = {
 }
 
 const TableView = (props) => {
-  
-  return <div className="table-view" style={{
-    transform: `translateX(${props.open ? 0 : 1500}px)`,
-  }}>
-    {
-      tables.map((value, i) =>
-        <Table pos={positionById[value.id]} status={value.status} />
-      )
-    }
+  const [selectedTableId, changeSelectedTableId] = useState(null)
 
-  </div>;
+  const handleClick = (id) => {
+    changeSelectedTableId(id)
+  }
+
+  const handleClose = () => {
+    changeSelectedTableId(null);
+  };
+
+  return (
+    <div className="table-view" style={{
+      transform: `translateX(${props.open ? 0 : 1500}px)`,
+    }}>
+      {
+        tables.map((value, i) =>
+          <Table key={i} id={value.id} pos={positionById[value.id]} status={value.status}
+            onclick={() => handleClick(value.id)} />
+        )
+      }
+      {selectedTableId && (
+        <TableModal
+          show={true}
+          handleClose={handleClose}
+          tableId={selectedTableId}
+        />
+      )}
+    </div>);
 };
 
 export default TableView;

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, getDocs, getFirestore, query } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, setDoc, doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCfTzr1Bb6vQEDMAMLW6k1IxkS4NBO89Eg",
@@ -13,12 +13,13 @@ const firebaseConfig = {
 const db = getFirestore(initializeApp(firebaseConfig));
 
 export const DataAccessService = {
-  AddTable: async function (x, y, inUse) {
+  AddTable: async function (id, x, y) {
     try {
-      await addDoc(collection(db, "Tables"), {
+      await setDoc(doc(db, "Tables", id), {
         x: x,
         y: y,
-        inUse: inUse,
+        inUse: false,
+        Seated: []
       });
     } catch (e) {
       return e;
@@ -34,13 +35,29 @@ export const DataAccessService = {
     }
   },
 
-  AddSeat: async function (newSeat) {
+  AddSeat: async function (newUser) {
     try {
-      console.log(newSeat);
-      const add = await addDoc(collection(db, "Users"), newSeat);
-      return;
+      await updateDoc(doc(db, "Tables", newUser.table), {
+        inUse: true,
+        Seated: arrayUnion({
+          name: newUser.name,
+          status: newUser.status,
+          duration: newUser.duration
+        })
+      });
     } catch (e) {
+      console.log(e)
       return e;
     }
   },
+
+  RemoveSeat: async function (user){
+    await updateDoc(doc(db, "Tables", user.table), {
+      Seated: arrayRemove({
+        name: user.name,
+        status: user.status,
+        duration: user.duration
+      })
+    })
+  }
 };
