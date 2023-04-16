@@ -22,12 +22,12 @@ const TableModal = (props) => {
         setOtherText(event.target.value);
      };
 
-     async function Submit(){
+    function Submit(){
         if(tempStatus === 1){
-            setStatus("Eating");
+            setStatus("eating");
         }
         else if(tempStatus === 2){
-            setStatus("Studying");
+            setStatus("studying");
         }
         else if (tempStatus ===3){
             setStatus(otherText);
@@ -37,7 +37,7 @@ const TableModal = (props) => {
         props.handleClose()
      };
 
-    return <>
+    return( <>
         <Modal show={props.show} onHide={props.handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Request Company</Modal.Title>
@@ -68,7 +68,8 @@ const TableModal = (props) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </>;
+    </>
+    );
 }
 
 export default TableModal;
