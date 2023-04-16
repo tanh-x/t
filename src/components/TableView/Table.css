@@ -1,9 +1,8 @@
 :root {
     --accent1: #0B3141;
-    --accent2: #1E5264;
-    --accent3: #011923; 
-    --accent4: #033746;
-    --text1: #BCBCBC; 
+    --accent2: #444444;
+    --text1: #DDDDDD; 
+
 }
 
 .toast-container {
