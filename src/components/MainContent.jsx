@@ -6,7 +6,7 @@ import TableView from "./TableView/TableView";
 
 const MainContent = (props) => {
   return <div className="underlay">
-    <MapView />
+    <MapView loc={props.loc}/>
   </div>;
 };
 
