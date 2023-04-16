@@ -43,6 +43,7 @@ const MapView = (props) => {
                 zoom: zoom,
                 pitch: 0,
                 bearing: 0,
+                essential: true
             })
         } else {
             const coords = halls[props.loc].coords;
@@ -51,6 +52,7 @@ const MapView = (props) => {
                 zoom: 17.85,
                 pitch: 60,
                 bearing: 0,
+                essential: true
             })
         }
     }, [props.loc])
