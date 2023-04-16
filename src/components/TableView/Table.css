@@ -1,0 +1,25 @@
+:root {
+    --accent1: #0B3141;
+    --accent2: #1E5264;
+    --accent3: #011923; 
+    --accent4: #033746;
+    --text1: #BCBCBC; 
+}
+
+.toast-container {
+    width: 500px;
+}
+
+.toast-head {
+    font-size: 20px;
+    color: var(--accent2);
+    background: var(--text1);
+}
+
+.toast-body {
+ display: flex;
+ justify-content: space-between;
+ font-size: 17px;
+ background: var(--accent2);
+ color: var(--text1);
+}
