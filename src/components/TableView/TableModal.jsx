@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import {DataAccessService} from '../../DataAccessService';
 
 const TableModal = (props) => {
 
@@ -22,18 +23,11 @@ const TableModal = (props) => {
         setOtherText(event.target.value);
      };
 
-    function Submit(){
-        if(tempStatus === 1){
-            setStatus("eating");
-        }
-        else if(tempStatus === 2){
-            setStatus("studying");
-        }
-        else if (tempStatus ===3){
-            setStatus(otherText);
-        }
+     async function Submit(){
+        DataAccessService.AddSeat({Name: name, Endtime: new Date(), Status: status});
         setOtherText("");
-        setTemptStatus("");
+        setStatus("");
+        setName("");
         props.handleClose()
      };
 
@@ -47,13 +41,13 @@ const TableModal = (props) => {
             <input type = 'text' id='name' onChange={updateName}></input>
             <br></br>
             Status: <br></br>
-            <input type = 'radio' id = 'eat' name='stats' onClick={() => setTemptStatus(1)}></input>
+            <input type = 'radio' id = 'eat' name='stats' onClick={() => setStatus("Eating")}></input>
             <label>&nbsp;Eating&emsp;</label>
             
-            <input type = 'radio' id='study' name='stats' onClick={() => setTemptStatus(2)}></input>
+            <input type = 'radio' id='study' name='stats' onClick={() => setStatus("Studying")}></input>
             <label>&nbsp;Studying&emsp;</label>
 
-            <input type = 'radio' id='otherRadio' name='stats' onClick={() => setTemptStatus(3)}></input>
+            <input type = 'radio' id='otherRadio' name='stats' onClick={() => setStatus(otherText)}></input>
             <label>&nbsp;Other&emsp;</label>
             <input type = 'text' id='other' onChange={updateOther}></input>
             <br></br>

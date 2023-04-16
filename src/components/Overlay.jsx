@@ -2,8 +2,10 @@ import "../App.css";
 import './Overlay.css'
 import Sidebar from "./Sidebar/Sidebar";
 import TableView from "./TableView/TableView";
+import TableModal from "./TableView/TableModal"
 
 const Overlay = (props) => {
+
   return (
     <div className="overlay">
       <Sidebar toggleLocation={props.toggleLocation} />
