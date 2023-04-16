@@ -9,8 +9,6 @@ const Overlay = (props) => {
     <div className="overlay">
       <Sidebar />
       <div className="table-view">
-        <button >ummm</button>
-        <TableModal show={true}></TableModal>
         khkdashkdsaldss
       </div>
     </div>
