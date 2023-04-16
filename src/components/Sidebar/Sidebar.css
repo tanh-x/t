@@ -18,12 +18,12 @@
 }
 
 .accordion-header:hover {
-  background-color: #51515161;
+  background-color: #61616191;
   box-shadow: 0 0 9px 3px #ffffff60;
   color: #fff;
   font-size: 1.1em;
 
-  transition: 0.1s all;
+  transition: 0.15s all;
 }
 
 .accordion-button::after {
