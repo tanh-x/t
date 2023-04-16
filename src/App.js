@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-
 import Overlay from "./components/Overlay";
 import Underlay from './components/Underlay';
 import LocationCards from "./components/LocationCard";
