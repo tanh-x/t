@@ -50,7 +50,7 @@ const Sidebar = (props) => {
         background: "#3B3B3B32",
       }}>
         <Container>
-          <Navbar.Brand style={{ fontSize: "1.5em", marginLeft: "0.3em", marginRight: "0.667em" }}>SitWithMe</Navbar.Brand>
+          <Navbar.Brand style={{ fontSize: "1.5em", marginLeft: "0.2em", marginRight: "0.667em" }}><img id="logo" src="sitwithmelogo.png"></img></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link >Home</Nav.Link>
             <Nav.Link >About</Nav.Link>

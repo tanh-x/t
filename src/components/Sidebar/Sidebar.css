@@ -60,3 +60,10 @@
   background-color: #31313156;
   box-shadow: 0 0 9px 3px #ffffff20;
 }
+
+#logo {
+  max-width: 115%;
+  height: auto;
+  margin-top: -8%;
+  margin-left: -0.3em;
+}
