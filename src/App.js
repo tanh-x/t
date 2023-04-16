@@ -2,9 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-
 import Overlay from "./components/Overlay";
-import Underlay from "./components/Underlay";
+import Underlay from './components/Underlay';
+import LocationCards from "./components/LocationCard";
 
 function App() {
   const [selectedLocation, changeLocation] = useState(null);
@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      <Underlay location={selectedLocation} />
-      <Overlay changeLocation={toggleMapView} />
+      <Overlay />
+      <Underlay />
     </div>
   );
 }
