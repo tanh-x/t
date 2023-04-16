@@ -1,15 +1,16 @@
 import Toast from 'react-bootstrap/Toast';
+import React, { useState, useEffect } from 'react';
+
 
 const TablePopUp = (props) => {
-    return <>
-    <Toast>
-      <Toast.Header>
-        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
-        <strong className="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
+    return( <>
+    <Toast show={props.show} onClose={props.popClose} position ="middle-center">
+      <Toast.Header closeButton={true}>
+        <strong className="me-auto">Sit w/ Me</strong>
+        <small>TIME REMAINING</small>
       </Toast.Header>
-      <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
+      <Toast.Body>NAME AND STATUS</Toast.Body>
     </Toast>
-    </>;
+    </> );
 }
 export default TablePopUp;
