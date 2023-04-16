@@ -2,9 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "maplibre-gl/dist/maplibre-gl.css"
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import Overlay from "./components/Overlay";
 import MainContent from "./components/MainContent";
+import User from "./Backend/User";
+import {DataAccessService} from "./Backend/DataAccessService";
 
 function App() {
   const [loc, setLoc] = useState(null);

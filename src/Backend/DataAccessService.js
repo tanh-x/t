@@ -35,9 +35,10 @@ export const DataAccessService = {
     }
   },
 
-  AddSeat: async function (tableId, newUser) {
+  AddSeat: async function (newUser) {
     try {
       await updateDoc(doc(db, "Tables", newUser.table), {
+        inUse: true,
         Seated: arrayUnion({
           name: newUser.name,
           status: newUser.status,
@@ -45,6 +46,7 @@ export const DataAccessService = {
         })
       });
     } catch (e) {
+      console.log(e)
       return e;
     }
   },

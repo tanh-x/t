@@ -39,7 +39,7 @@ const Sidebar = (props) => {
       </Navbar>
       <Accordion>
         {Object.entries(halls).map(([k, v], i) =>
-          <Accordion.Item eventKey={i} variant="custom">
+          <Accordion.Item key={i} eventKey={i} variant="custom">
             <Accordion.Header onClick={() => {
               props.toggleLocation(k)
             }}>
