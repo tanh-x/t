@@ -36,13 +36,13 @@ export const halls = {
   
     "The Kitchen": {
       numPeople: 23,
-      description: "The Kitchen is a sprawling, industrial-style space with high ceilings, exposed pipes, and large windows that let in plenty of natural light. The walls are a warm shade of brick red, and the floor is made of polished concrete. At the center of the room is a massive island, surrounded by a variety of stainless steel appliances and gadgets, including a commercial-grade range, a built-in oven, and a deep fryer.",
+      description: "The Kitchen is a sprawling, industrial-style space with high ceilings, exposed pipes, and large windows that let in plenty of natural light.",
       coords: [42.02382586363091, -93.64760570938374],
     },
   
     "The Bakery": {
       numPeople: 16,
-      description: "The Bakery is a cozy and inviting space, with walls painted in warm shades of yellow and orange. The air is filled with the heavenly aroma of freshly baked bread, pastries, and cakes. Display cases line the walls, showcasing an array of colorful and delicious treats, from delicate macarons to crusty loaves of artisan bread. Behind the counter, bakers work their magic, kneading dough, shaping croissants, and piping frosting onto cupcakes. The Bakery is a place where the simple pleasure of a perfectly baked pastry can transport you to another world, and where every bite is a delight for the senses.",
+      description: "The Bakery is a cozy and inviting space, with walls painted in warm shades of yellow and orange.",
       coords: [42.02382586363091, -93.64760570938374],
     },
   }

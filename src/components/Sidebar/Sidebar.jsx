@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
 
 import "./Sidebar.css";
 import { halls } from "../../scripts/halls";
@@ -41,7 +41,8 @@ const Sidebar = (props) => {
         {Object.entries(halls).map(([k, v], i) =>
           <Accordion.Item eventKey={i} variant="custom">
             <Accordion.Header onClick={() => {
-              props.toggleLocation(k)
+              props.toggleLocation(k);
+              props.setOpen(false);
             }}>
               <div className="class-header">
                 <h4>{k}</h4>
@@ -51,9 +52,17 @@ const Sidebar = (props) => {
               </div>
             </Accordion.Header>
             <Accordion.Body>
-              <span style={{ fontSize: "1.33em" }}>
-                {v.description ?? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
-              </span>
+              <ListGroup defaultActiveKey="#link1">
+                <ListGroup.Item >
+                  sample text
+                </ListGroup.Item>
+                <ListGroup.Item >
+                  text
+                </ListGroup.Item>
+                <ListGroup.Item action onClick={() => {props.toggle()}}>
+                  + Create new company request
+                </ListGroup.Item>
+              </ListGroup>
             </Accordion.Body>
           </Accordion.Item>
         )}

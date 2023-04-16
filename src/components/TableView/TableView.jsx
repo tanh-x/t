@@ -91,7 +91,9 @@ const positionById = {
 
 const TableView = (props) => {
   
-  return <div className="table-view">
+  return <div className="table-view" style={{
+    transform: `translateX(${props.open ? 0 : 1500}px)`,
+  }}>
     {
       tables.map((value, i) =>
         <Table pos={positionById[value.id]} status={value.status} />
