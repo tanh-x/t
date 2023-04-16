@@ -5,6 +5,20 @@
 .table {
   pointer-events: auto;
   position: absolute;
-  width: 1.8vw;
-  height: 1.8svw;
+  width: 2.667vw;
+  height: 2.667vw;
+
+  opacity: 0.8;
+  transition: all 0.1s;
+}
+
+.table:hover {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 0 9px 3px #ffffff30;
+
+}
+
+.table:active {
+    transform: scale(0.96);
 }

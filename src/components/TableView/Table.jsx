@@ -1,14 +1,14 @@
 const colorByStatus = {
-    "open": "#08D192",
-    "default": "#979D8C",
+    "open": "#11F2A0",
+    "default": "#9AA396",
 }
 
 const Table = (props) => {
 
 
     return <div className="table" style={{
-        left: props.pos[0] * 2.5+ "vw",
-        top: props.pos[1] * 2.5 + "vw",
+        left: props.pos[0] * 3 + "vw",
+        top: props.pos[1] * 3 + "vw",
         backgroundColor: colorByStatus[props.status]
     }}>
     </div>
