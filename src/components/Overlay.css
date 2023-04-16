@@ -34,7 +34,7 @@
   height: 100%;
   width: 40vw;
 
-  background-color: #111111c0;
+  background-color: #171717c0;
   backdrop-filter: blur(12px);
 
   border: 1px #444 solid;
@@ -45,6 +45,10 @@
 
   overflow-y: scroll;
 }
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 .dummy {
   width: 100%;
   height: 100%;
