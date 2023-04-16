@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import {DataAccessService} from '../../Backend/DataAccessService';
+import { DataAccessService } from '../../Backend/DataAccessService';
 import User from "../../Backend/User";
+import "./TableModal.css";
+
 
 const TableModal = (props) => {
 
@@ -35,37 +37,37 @@ const TableModal = (props) => {
     }
 
     return (<>
-            <Modal show={props.show} onHide={props.handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Request Company</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <label>Name:</label><br></br>
-                    <input type='text' id='name' onChange={updateName}></input>
-                    <br></br>
-                    Status: <br></br>
-                    <input type='radio' id='eat' name='stats' onClick={() => setStatus("Eating")}></input>
-                    <label>&nbsp;Eating&emsp;</label>
+        <Modal show={props.show} onHide={props.handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title>Request Company</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <label>Name:</label><br></br>
+                <input type='text' id='name' onChange={updateName}></input>
+                <br></br>
+                Status: <br></br>
+                <input type='radio' id='eat' name='stats' onClick={() => setStatus("Eating")}></input>
+                <label>&nbsp;Eating&emsp;</label>
 
-                    <input type='radio' id='study' name='stats' onClick={() => setStatus("Studying")}></input>
-                    <label>&nbsp;Studying&emsp;</label>
+                <input type='radio' id='study' name='stats' onClick={() => setStatus("Studying")}></input>
+                <label>&nbsp;Studying&emsp;</label>
 
-                    <input type='radio' id='otherRadio' name='stats' onClick={() => setStatus(otherText)}></input>
-                    <label>&nbsp;Other&emsp;</label>
-                    <input type='text' id='other' onChange={updateOther}></input>
-                    <br></br>
+                <input type='radio' id='otherRadio' name='stats' onClick={() => setStatus(otherText)}></input>
+                <label>&nbsp;Other&emsp;</label>
+                <input type='text' id='other' onChange={updateOther}></input>
+                <br></br>
 
-                    <label>Duration:</label> <br></br>
-                    <input type='number' id='duration' onChange={updateTime}></input> min
+                <label>Duration:</label> <br></br>
+                <input type='number' id='duration' onChange={updateTime}></input> min
 
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" onClick={Submit}>
-                        Confirm Seat
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="primary" onClick={Submit}>
+                    Submit
+                </Button>
+            </Modal.Footer>
+        </Modal>
+    </>
     );
 }
 
