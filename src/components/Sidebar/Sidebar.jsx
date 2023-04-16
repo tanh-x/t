@@ -45,7 +45,9 @@ const Sidebar = (props) => {
     <Accordion>
       {Object.entries(halls).map(([k, v], i) =>
         <Accordion.Item eventKey={i}>
-          <Accordion.Header>
+          <Accordion.Header onClick={() => {
+      props.toggleLocation(k)
+    }}>
             <div className="class-header">
               <h4>{k}</h4>
               <strong style={{ fontSize: "1.66em" }}>

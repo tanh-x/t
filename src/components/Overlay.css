@@ -37,7 +37,7 @@
   background-color: #111111c0;
   backdrop-filter: blur(12px);
 
-  border: 2px #999 solid;
+  border: 1px #444 solid;
   padding: 1.6667em;
   border-radius: 8px;
 
@@ -45,15 +45,17 @@
 
   overflow-y: scroll;
 }
-
-.table-view {
+.dummy {
   width: 100%;
   height: 100%;
-  /*     
-    background-color: #44444480; 
-    backdrop-filter: blur(12px);
-     */
+}
 
-  border: 4px yellow solid;
-  flex-grow: 4;
+.table-view-wrapper {
+  width: 100%;
+  height: 100%;
+  border: 1px #444 solid;
+
+  background-color: #111111c0;
+  backdrop-filter: blur(12px);
+  pointer-events: auto;
 }

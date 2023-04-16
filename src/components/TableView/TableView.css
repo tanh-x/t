@@ -1,0 +1,10 @@
+.table-view {
+  position: absolute;
+}
+
+.table {
+  pointer-events: auto;
+  position: absolute;
+  width: 1.8vw;
+  height: 1.8svw;
+}

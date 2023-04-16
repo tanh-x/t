@@ -18,7 +18,7 @@ const MapView = (props) => {
             zoom: zoom
         });
 
-    });
+    }, []);
 
     return (
         <div ref={mapContainer} style={{ width: "100vw", height: "100vh" }} />
