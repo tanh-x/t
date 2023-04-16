@@ -1,4 +1,33 @@
 
 .location-name {
-    font-size: 2em; 
+    font-size: 1.5em; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.card-body {
+    background-color: rgb(225, 113, 93);
+    border-radius: 5%;
+    border: 1px black solid;
+    text-align: center;
+    height: 160px;
+    margin: 10px 2px 10px 2px;
+}
+
+img {
+    max-width: 25%;
+}
+
+.number {
+    margin-top: 18px;
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+}
+
+.div-image {
+    margin-top: 18px;
+    width: 50%;
+    float: right;
 }

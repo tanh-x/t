@@ -1,5 +1,7 @@
 const TableView = (props) => {
-    return <></>;
+    return <div style={{ border: "1px solid blue", background: "#888"}}>
+        dsafajgkgjlsdgjksj
+    </div>;
 }
 
 export default TableView;

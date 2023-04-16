@@ -4,7 +4,19 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #aaa;
+
+  padding: 4em;
+  z-index: 5;
+  border: 2px solid red;
+
+  
+}
+
+.sidebar {
+  border: 1px solid green;
+  width: 45em;
+  height: 100%;
+  
 }
 
 .underlay {
@@ -13,6 +25,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://trello-backgrounds.s3.amazonaws.com/5faed358bd9652310a307212/1280x800/e8760e92644125f3cd97ad21aa0116a8/polestar_2.jpg");
-
+  background-color: #f2eeb3;
+  z-index: 0;
 }
