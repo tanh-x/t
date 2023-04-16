@@ -7,52 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 
 import "./Sidebar.css";
-
-
-const halls = {
-  "UDCC": {
-    numPeople: 100,
-  },
-
-  "Friley Windows": {
-    numPeople: 50,
-  },
-
-  "Campameal": {
-    numPeople: 20,
-  },
-
-  "Seasons": {
-    numPeople: 70,
-  },
-
-  "Student Innovation Center": {
-    numPeople: 11,
-  },
-
-  "Parks Library": {
-    numPeople: 61,
-  },
-
-  "Horse Barn": {
-    numPeople: 44,
-    description: "The Horse Barn is a rustic and charming structure made of wood and stone. It's nestled in a lush, green meadow, surrounded by rolling hills and towering trees. Inside, the scent of hay and fresh straw fills the air, mixed with the musky aroma of horses. The barn is spacious and well-ventilated, with stalls lining the walls and a central aisle that runs the length of the building. In each stall, a majestic horse stands or lies down, gazing curiously at the visitors who come to admire them. The sound of whinnies, nickers, and the rustle of hooves on straw creates a soothing and peaceful atmosphere, and it's clear that the horses are happy and well-cared for. The Horse Barn is a place where the bond between humans and animals is strong, where the majesty and grace of these magnificent creatures can be appreciated, and where the simple pleasures of country life are savored.",
-  },
-
-  "That walkway between Howe and Hoover": {
-    numPeople: 9,
-  },
-
-  "The Kitchen": {
-    numPeople: 23,
-    description: "The Kitchen is a sprawling, industrial-style space with high ceilings, exposed pipes, and large windows that let in plenty of natural light. The walls are a warm shade of brick red, and the floor is made of polished concrete. At the center of the room is a massive island, surrounded by a variety of stainless steel appliances and gadgets, including a commercial-grade range, a built-in oven, and a deep fryer."
-  },
-
-  "The Bakery": {
-    numPeople: 16,
-    description: "The Bakery is a cozy and inviting space, with walls painted in warm shades of yellow and orange. The air is filled with the heavenly aroma of freshly baked bread, pastries, and cakes. Display cases line the walls, showcasing an array of colorful and delicious treats, from delicate macarons to crusty loaves of artisan bread. Behind the counter, bakers work their magic, kneading dough, shaping croissants, and piping frosting onto cupcakes. The Bakery is a place where the simple pleasure of a perfectly baked pastry can transport you to another world, and where every bite is a delight for the senses.",
-  },
-}
+import { halls } from "../../scripts/halls";
 
 const Sidebar = (props) => {
   return <>

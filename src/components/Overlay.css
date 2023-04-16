@@ -59,7 +59,7 @@
   height: 100%;
   border: 1px #444 solid;
 
-  background-color: #111111c0;
-  backdrop-filter: blur(12px);
+  background-color: #111111a0;
+  backdrop-filter: blur(6px);
   pointer-events: auto;
 }
