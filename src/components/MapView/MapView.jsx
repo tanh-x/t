@@ -48,8 +48,9 @@ const MapView = (props) => {
             const coords = halls[props.loc].coords;
             map.current.flyTo({ 
                 center: [coords[1], coords[0]],
-                zoom: 17.6,
-                pitch: 60
+                zoom: 17.85,
+                pitch: 60,
+                bearing: 0,
             })
         }
     }, [props.loc])

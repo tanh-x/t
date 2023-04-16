@@ -7,7 +7,7 @@
 
   padding: 4em;
   z-index: 5;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
   display: flex;
   flex-direction: row;
@@ -26,8 +26,10 @@
   align-items: center;
   padding-top: 0.333em;
   padding-bottom: 0.333em;
-  padding-left: 0.667em;
-  padding-right: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  overflow: hidden;
 }
 
 .sidebar {
