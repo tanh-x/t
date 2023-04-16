@@ -3,21 +3,16 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import Overlay from "./components/Overlay";
-import Underlay from './components/Underlay';
-import LocationCards from "./components/LocationCard";
+import MainContent from "./components/MainContent";
 
 function App() {
-  const [selectedLocation, changeLocation] = useState(null);
-
-  const toggleMapView = (location) => {
-    changeLocation(selectedLocation ? null : location);
-    console.log(location);
-  }
+  const [loc, setLoc] = useState(null);
+  const toggleLocation = (newLocation) => { setLoc(loc == newLocation ? null : newLocation); }
 
   return (
     <div className="App">
-      <Overlay />
-      <Underlay />
+      <Overlay toggleLocation={toggleLocation}/>
+      <MainContent loc={loc}/>
     </div>
   );
 }

@@ -1,18 +1,13 @@
 import "../App.css";
-import TableModal from "./TableView/TableModal";
+
 import { useState } from "react";
+import MapView from "./MapView/MapView";
+import TableView from "./TableView/TableView";
 
-const Underlay = (props) => {
-  const [show,setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const MainContent = (props) => {
   return <div className="underlay">
-       <button onClick={()=>{setShow(true); console.log(show)}}>test</button>
-       <TableModal show={show} handleShow = {handleShow} handleClose = {handleClose}>
-      
-       </TableModal>
+    {props.loc == null ? <MapView /> : <TableView loc={props.loc} />}
   </div>;
 };
 
-export default Underlay;
+export default MainContent;
