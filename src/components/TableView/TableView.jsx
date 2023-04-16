@@ -90,11 +90,11 @@ const positionById = {
 }
 
 const TableView = (props) => {
-  
+
   return <div className="table-view">
     {
       tables.map((value, i) =>
-        <Table pos={positionById[value.id]} status={value.status} />
+        <Table id={value.id} pos={positionById[value.id]} status={value.status} />
       )
     }
 

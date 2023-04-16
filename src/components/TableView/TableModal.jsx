@@ -24,7 +24,6 @@ const TableModal = (props) => {
      };
 
      async function Submit(){
-        DataAccessService.AddSeat({Name: name, Endtime: new Date(), Status: status});
         setOtherText("");
         setStatus("");
         setName("");
