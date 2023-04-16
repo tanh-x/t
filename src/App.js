@@ -8,15 +8,14 @@ import {useEffect} from "react";
 
 function App() {
     // TODO: Add SDKs for Firebase products that you want to use
-    useEffect( () => {
-        let out = DataAccessService.GetTables().then(out => {
-            out.forEach()
-        })
-        // out.forEach((doc) => {
-        //     console.log(doc.id, " => ", doc.data());
-        // })
-        return () => {}
-    })
+    useEffect(() => {
+        (async () => {
+            let out = await DataAccessService.GetTables()
+            out.forEach((doc) => {
+                console.log(doc.id, " => ", doc.data())
+            })
+        })()
+    }, [])
     return (
         <div className="App">
             <Overlay/>

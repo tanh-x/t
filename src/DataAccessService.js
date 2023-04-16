@@ -26,7 +26,7 @@ export const DataAccessService = {
     GetTables: async function(){
         try{
             const q = query(collection(db, "Tables"));
-            return await getDocs(collection(db, "Table"))
+            return await getDocs(q)
         } catch (e) {
             return e
         }
