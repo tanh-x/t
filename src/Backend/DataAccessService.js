@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, query, setDoc, doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, setDoc, doc, updateDoc, arrayUnion, arrayRemove, onSnapshot} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCfTzr1Bb6vQEDMAMLW6k1IxkS4NBO89Eg",
@@ -32,6 +32,16 @@ export const DataAccessService = {
       return await getDocs(q);
     } catch (e) {
       return e;
+    }
+  },
+
+  GetTable: async function(table, setter) {
+    try {
+      return await onSnapshot(doc(db, "Tables", table), (doc) => {
+        setter(doc.data())
+      })
+    } catch (e) {
+      return e
     }
   },
 
