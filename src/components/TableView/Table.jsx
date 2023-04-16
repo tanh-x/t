@@ -8,11 +8,12 @@ const Table = (props) => {
     useEffect(() => {
         (async () => {
            await DataAccessService.GetTable(props.id, changeMyData)
+            console.log("Help")
         })().then(() => {
             changeDataStatus(true);
         })
         // DataAccessService.AddTable(props.id, props.pos[0] ,props.pos[1]).then(console.log)
-    }, [myData])
+    }, [props.id])
 
     // const colorByStatus = {
     //     true: ",
