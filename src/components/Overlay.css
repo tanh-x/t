@@ -1,6 +1,59 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 4em;
+  z-index: 5;
+  border: 2px solid red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  pointer-events: none;
+}
+
+.class-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-top: 0.333em;
+  padding-bottom: 0.333em;
+  padding-left: 0.667em;
+  padding-right: 2em;
+}
+
 .sidebar {
-    background-color: rgb(68, 68, 68); 
-    border: 3px black solid;
-    padding: 4px;
-    border-radius: 30px;
+  height: 100%;
+  width: 40vw;
+
+  background-color: #111111c0;
+  backdrop-filter: blur(12px);
+
+  border: 2px #999 solid;
+  padding: 1.6667em;
+  border-radius: 8px;
+
+  pointer-events: auto;
+
+  overflow-y: scroll;
+}
+
+.table-view {
+  width: 100%;
+  height: 100%;
+  /*     
+    background-color: #44444480; 
+    backdrop-filter: blur(12px);
+     */
+
+  border: 4px yellow solid;
+  flex-grow: 4;
 }
