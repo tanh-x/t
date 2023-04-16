@@ -1,0 +1,35 @@
+.modal {
+  /* --bs-modal-bg: #4440; */
+
+  background-color: #0000;
+}
+
+.modal-header {
+  background-color: #1f2224;
+  color: #eee;
+}
+.modal-footer {
+  background-color: #1f2224;
+}
+
+.modal-content {
+  --bs-modal-bg: #0000;
+  background-color: #0000 !important;
+}
+
+.modal-body {
+  color: #eee;
+  background-color: #141617;
+}
+
+input {
+  background-color: #131516;
+  border: 1px #666 solid;
+  border-radius: 4px;
+}
+
+text,
+textarea,
+input {
+  color: #eee;
+}
