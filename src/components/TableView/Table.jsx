@@ -1,14 +1,13 @@
-import {DataAccessService} from "../../Backend/DataAccessService";
-import {useEffect, useState} from "react";
-import {doc, onSnapshot} from "firebase/firestore";
+import { DataAccessService } from "../../Backend/DataAccessService";
+import { useEffect, useState } from "react";
+import { doc, onSnapshot } from "firebase/firestore";
 
 const Table = (props) => {
     const [myData, changeMyData] = useState({})
     const [isDataLoaded, changeDataStatus] = useState(false)
     useEffect(() => {
         (async () => {
-           await DataAccessService.GetTable(props.id, changeMyData)
-            console.log("Help")
+            await DataAccessService.GetTable(props.id, changeMyData)
         })().then(() => {
             changeDataStatus(true);
         })
@@ -20,7 +19,7 @@ const Table = (props) => {
     //     false: ,
     // }
 
-    if(!isDataLoaded){
+    if (!isDataLoaded) {
         return null
     }
     return <div className="table" onClick={props.onclick} style={{
